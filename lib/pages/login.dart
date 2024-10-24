@@ -53,14 +53,16 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 32.0),
 
-              ElevatedButton(
+              OutlinedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.amber, // Warna latar belakang
+                  backgroundColor:
+                      Colors.deepPurple[900], // Warna latar belakang
                   textStyle: const TextStyle(color: Colors.white), // Warna teks
                   minimumSize: const Size(200, 50), // Ukuran tombol
                   shape: RoundedRectangleBorder(
                     side: const BorderSide(
-                        color: Colors.amber, width: 2), // Outline
+                        color: const Color.fromARGB(255, 217, 178, 5),
+                        width: 2), // Outline
                     borderRadius: BorderRadius.circular(8), // Radius sudut
                   ),
                 ),
@@ -79,9 +81,14 @@ class LoginPage extends StatelessWidget {
                     showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: const Text('Error'),
-                        content:
-                            const Text('Username dan Password wajib diisi!'),
+                        title: const Text(
+                          'Error',
+                          style: TextStyle(color: Color(0xff311b92)),
+                        ),
+                        content: const Text(
+                            'Username dan Password wajib diisi!',
+                            style: TextStyle(color: Color(0xff311b92))),
+                        backgroundColor: Colors.amber,
                         actions: [
                           TextButton(
                             onPressed: () => Navigator.pop(context),
@@ -92,7 +99,10 @@ class LoginPage extends StatelessWidget {
                     );
                   }
                 },
-                child: const Text('Sign In'),
+                child: const Text('SIGN IN',
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: const Color.fromARGB(255, 217, 178, 5))),
               ),
             ],
           ),
