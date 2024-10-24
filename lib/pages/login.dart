@@ -10,7 +10,7 @@ class LoginPage extends StatelessWidget {
     final TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 217, 178, 5),
+      backgroundColor: const Color.fromARGB(255, 217, 178, 5),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(24.0),
@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "LOGIN PAGE",
+                "LOGIN PAG",
                 style: TextStyle(
                     fontSize: 32,
                     color: Colors.deepPurple[900],
@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.amber, // Warna latar belakang
-                  textStyle: TextStyle(color: Colors.white), // Warna teks
+                  textStyle: const TextStyle(color: Colors.white), // Warna teks
                   minimumSize: const Size(200, 50), // Ukuran tombol
                   shape: RoundedRectangleBorder(
                     side: const BorderSide(
